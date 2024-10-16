@@ -1,0 +1,10 @@
+# Exclude development-specific files and directories
+node_modules
+npm-debug.log
+
+# Exclude version control files
+.git
+.gitignore
+*.md
+# Exclude editor-specific files
+.vscode
