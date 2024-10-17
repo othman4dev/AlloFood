@@ -1,4 +1,3 @@
-const { boolean } = require("joi");
 const Role = require("./roleModel");
 const mongoose = require("mongoose");
 
@@ -21,6 +20,20 @@ const schema = {
     min: 6,
     max: 15,
   },
+  address: {
+    street: {
+      type: String,
+      required: true,
+    },
+    city: {
+      type: String,
+      required: true,
+    },
+    state: {
+      type: String,
+      required: true,
+    },
+  },
   password: {
     type: String,
     required: true,
@@ -33,7 +46,7 @@ const schema = {
     type: Date,
     default: null,
   },
-  alwaysRequire2FA: {
+  require2FA: {
     type: Boolean,
     default: false,
   },
